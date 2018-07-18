@@ -16,7 +16,9 @@ const db = require('./config/database');
 //CONNESSIONE A MONGOOSE
 
     mongoose.Promise=global.Promise;
-    mongoose.connect(db.mongoURI)
+    mongoose.connect(db.mongoURI,{
+        useMongoClient:true,
+    })
     .then(()=>console.log('server connesso'))
     
     .catch(err=>console.log('non connect available'))
