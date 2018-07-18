@@ -1,0 +1,22 @@
+
+<h3>Modifica User Info</h3>
+
+<div class="card card-body mt-5">
+<form  action="/modifica_user/{{user.id}}?_method=POST" method="post">
+<input type="hidden" name="_method" value="POST">
+  <div class="form-group">
+    <label for="titolo">Nome</label>
+    <input type="text" class="form-control" name="nome" value="{{user.nome}}">
+  </div>
+  <div class="form-group">
+    <label for="contenuto">Cognome</label>
+    <textarea class="form-control" name="cognome">{{user.cognome}}</textarea>
+  </div>
+  <div class="form-group">
+    <label for="contenuto">email</label>
+    <textarea class="form-control" name="email">{{user.email}}</textarea>
+  </div>
+  
+  <button type="submit" class="btn btn-success" name="aggiungi">Invia</button>
+</form>
+</div>

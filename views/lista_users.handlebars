@@ -1,0 +1,21 @@
+<h1 align='center'>Lista user</h1>
+
+{{#each user}}
+
+<div class='card card-body mb-5'>
+
+    <h3>{{nome}}</h3>
+    <p>{{cognome}}</p>
+    <p>{{email}}</p>
+    <a class='btn btn-primary btn-block mb-3' href='/modifica_user/{{id}}'>Modifica</a>
+
+    <form action='/lista_users/{{id}}?_method=DELETE'method='post'>
+    <input type='hidden' name='_method' value='DELETE'>
+    <input type='submit' class='btn btn-danger btn-block' value='DELETE'>
+
+
+    </form>
+</div>
+{{else}}
+<h1 align='center'>Nessuno user creato!</h1>
+{{/each}}
